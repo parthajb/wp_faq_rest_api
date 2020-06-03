@@ -73,7 +73,7 @@ $(document).on("click", ".tag", function(){
   container.innerHTML = '';
     console.log(tagid);
     var request = new XMLHttpRequest()
-    request.open('GET', 'https://kharkhua.com/wp-json/wp/v2/ufaq?ufaq-category=' + cityNew+'&ufaq-tag='+tagid, true)
+    request.open('GET', 'https://kharkhua.com/wp-json/wp/v2/ufaq?ufaq-category=' + city+'&ufaq-tag='+tagid, true)
     request.onload = function() {
         // Begin accessing JSON data here
         var data = JSON.parse(this.response)
