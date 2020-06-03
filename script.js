@@ -66,7 +66,7 @@ requestTags.send()
 
 
 $(document).on("click", ".tag", function(){
-  cityNew = city.substring(0, city.length - 1);
+  // cityNew = city.substring(0, city.length - 1);
   tagid = $(this).attr("data-id");
   $('.tag').removeClass('active');
   $(this).addClass('active');
