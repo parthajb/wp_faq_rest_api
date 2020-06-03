@@ -15,7 +15,7 @@ app.appendChild(container)
 
 
 var requestGroup = new XMLHttpRequest()
-requestGroup.open('GET', 'http://kharkhua.com/wp-json/wp/v2/ufaq-category/' + city, true)
+requestGroup.open('GET', 'https://kharkhua.com/wp-json/wp/v2/ufaq-category/' + city, true)
 requestGroup.onload = function() {
     // Begin accessing JSON data here
     var data = JSON.parse(this.response)
@@ -35,7 +35,7 @@ requestGroup.send()
 
 
 var requestTags = new XMLHttpRequest()
-requestTags.open('GET', 'http://kharkhua.com/wp-json/wp/v2/ufaq-tag/', true)
+requestTags.open('GET', 'https://kharkhua.com/wp-json/wp/v2/ufaq-tag/', true)
 requestTags.onload = function() {
     // Begin accessing JSON data here
     var data = JSON.parse(this.response)
@@ -73,7 +73,7 @@ $(document).on("click", ".tag", function(){
   container.innerHTML = '';
     console.log(tagid);
     var request = new XMLHttpRequest()
-    request.open('GET', 'http://kharkhua.com/wp-json/wp/v2/ufaq?ufaq-category=' + cityNew+'&ufaq-tag='+tagid, true)
+    request.open('GET', 'https://kharkhua.com/wp-json/wp/v2/ufaq?ufaq-category=' + cityNew+'&ufaq-tag='+tagid, true)
     request.onload = function() {
         // Begin accessing JSON data here
         var data = JSON.parse(this.response)
